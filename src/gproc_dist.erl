@@ -790,7 +790,7 @@ delete_globals(Globals) ->
       fun({{_,g,_},T} = K) when is_atom(T) ->
               ets:delete(?TAB, K);
          ({Key, Pid}) when is_pid(Pid); Pid==shared ->
-              ets:delete(?TAB, {Pid, Key});
+              ets:delete(?TAB, {Key, Pid});
          ({Pid, Key}) when is_pid(Pid); Pid==shared ->
 	      ets:delete(?TAB, {Pid, Key})
       end, Globals).

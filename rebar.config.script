@@ -22,4 +22,4 @@ CFG2 = case os:getenv("GPROC_DIST") of
 	       Script(Priv, "remove_deps.script",
 		      [{'CONFIG', CFG1}, {'DEPS', [gen_leader]}])
        end.
-Script(Priv, "check_edown.script", [{'CONFIG', CFG2}]).
+%% Script(Priv, "check_edown.script", [{'CONFIG', CFG2}]).
